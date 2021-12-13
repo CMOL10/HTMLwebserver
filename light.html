@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="title"><h2>Main Menu</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="temp.html">
+                        <span class="icon"></span>
+                        <span class="title">Temperature Sensor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="humid.html">
+                        <span class="icon"></span>
+                        <span class="title">Humidity Sensor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="title">Light Sensor</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="pressure.html">
+                        <span class="icon"></span>
+                        <span class="title">Barometer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="title">Live Weather</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu();">
+
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here: ">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </label>
+
+                </div>
+                <div class="user">
+                        <img src="user.jpg" alt="">
+                    </div>
+            </div>
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="graph">
+                            <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                            <script type="text/javascript" src="light.js" ></script>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
